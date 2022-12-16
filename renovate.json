@@ -21,11 +21,11 @@
       "datasourceTemplate": "maven"
     },
     {
-      "fileMatch": ["^sample/project/myDockerVersion.json$"],
+      "fileMatch": ["^sample/project/myDockerVersion.json"],
       "matchStrings": ["\"graalVMVersion\": \"(?<currentValue>.*?)\""],
-      "depNameTemplate": "graalvm",
-      "registryUrlTemplate": "gcr.io/cloud-devrel-kokoro-resources/",
-      "datasourceTemplate": "docker"
+      "depNameTemplate": "jdk",
+      "datasourceTemplate": "docker",
+      "packageNameTemplate": "ghcr.io/graalvm/jdk"
     }
   ]
 }
