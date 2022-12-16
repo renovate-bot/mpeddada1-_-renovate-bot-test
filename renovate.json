@@ -6,7 +6,7 @@
   "enabledManagers": ["regex"],
   "regexManagers": [
     {
-      "fileMatch": ["^.kokoro/nightly/graalvm-native.cfg$"],
+      "fileMatch": ["^\\.kokoro/nightly/graalvm-native\\.cfg$"],
       "matchStrings": ["graalvm:(?<currentValue>.*?)"],
       "depNameTemplate": "org.graalvm.sdk:graal-sdk",
       "datasourceTemplate": "maven"
