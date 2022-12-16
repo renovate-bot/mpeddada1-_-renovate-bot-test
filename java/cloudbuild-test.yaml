@@ -1,0 +1,12 @@
+timeout: 7200s # 2 hours
+substitutions:
+  _GRAALVM_VERSION: '22.1.0'
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args:
+      [
+        "tag",
+        "gcr.io/$PROJECT_ID/graalvm:${_GRAALVM_VERSION}",
+        "gcr.io/cloud-devrel-public-resources/graalvm:${_GRAALVM_VERSION}",
+      ]
+    waitFor: [ "graalvm-build" ]
