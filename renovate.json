@@ -19,12 +19,6 @@
       "matchStrings": ["\"graalVMVersion\": \"(?<currentValue>.*?)\""],
       "depNameTemplate": "org.graalvm.sdk:graal-sdk",
       "datasourceTemplate": "maven"
-    },
-    {
-      "fileMatch": ["^sample/project/myDockerVersion.json$"],
-      "matchStrings": ["\"graalVMVersion\": \"(?<currentValue>.*?)\""],
-      "depNameTemplate": "gcr.io/cloud-devrel-kokoro-resources/graalvm",
-      "datasourceTemplate": "docker"
     }
   ]
 }
