@@ -17,6 +17,12 @@
       ],
       "depNameTemplate": "org.graalvm.sdk:graal-sdk",
       "datasourceTemplate": "maven"
+    },
+    {
+      "fileMatch": ["^sample/project/myversion.json$"],
+      "matchStrings": ["\"graalVMVersion\": \"(?<currentValue>.*?)\""],
+      "depNameTemplate": "org.graalvm.sdj:graal-sdk",
+      "datasourceTemplate": "maven"
     }
   ]
 }
