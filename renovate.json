@@ -28,14 +28,7 @@
       "packageNameTemplate": "ghcr.io/graalvm/jdk"
     },
     {
-      "fileMatch": ["^java/cloudbuild.yaml"],
-      "matchStrings": ["substitutions:\n  _GRAALVM_VERSION: '(?<currentValue>.*?)'"],
-      "depNameTemplate": "jdk",
-      "datasourceTemplate": "docker",
-      "packageNameTemplate": "ghcr.io/graalvm/jdk"
-    },
-    {
-      "fileMatch": ["^java/cloudbuild-test.yaml"],
+      "fileMatch": ["^java/cloudbuild.yaml", "^java/cloudbuild-test.yaml"],
       "matchStrings": ["substitutions:\n  _GRAALVM_VERSION: '(?<currentValue>.*?)'"],
       "depNameTemplate": "jdk",
       "datasourceTemplate": "docker",
