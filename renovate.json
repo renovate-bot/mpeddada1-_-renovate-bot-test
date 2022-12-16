@@ -11,13 +11,20 @@
       "matchStrings": ["value: \"gcr.io/cloud-devrel-kokoro-resources/graalvm:(?<currentValue>.*?)\"",
         "value: \"gcr.io/cloud-devrel-kokoro-resources/graalvm17:(?<currentValue>.*?)\""],
       "depNameTemplate": "org.graalvm.sdk:graal-sdk",
-      "datasourceTemplate": "maven"
+      "datasourceTemplate": "docker"
+
     },
     {
       "fileMatch": ["^sample/project/myversion.json$"],
       "matchStrings": ["\"graalVMVersion\": \"(?<currentValue>.*?)\""],
       "depNameTemplate": "org.graalvm.sdk:graal-sdk",
       "datasourceTemplate": "maven"
+    },
+    {
+      "fileMatch": ["^sample/project/myDockerVersion.json$"],
+      "matchStrings": ["\"graalVMVersion\": \"(?<currentValue>.*?)\""],
+      "depName": "gcr.io/cloud-devrel-kokoro-resources/graalvm",
+      "datasource": "docker"
     }
   ]
 }
