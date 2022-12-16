@@ -23,7 +23,8 @@
     {
       "fileMatch": ["^sample/project/myDockerVersion.json$"],
       "matchStrings": ["\"graalVMVersion\": \"(?<currentValue>.*?)\""],
-      "registryUrlTemplate": "gcr.io/cloud-devrel-kokoro-resources/graalvm",
+      "registryUrlTemplate": "gcr.io/cloud-devrel-kokoro-resources/",
+      "depNameTemplate": "graalvm",
       "datasourceTemplate": "docker"
     }
   ]
