@@ -35,7 +35,7 @@
       "packageNameTemplate": "ghcr.io/graalvm/jdk"
     },
     {
-      "fileMatch": ["^synthtool/gcp/templates/java-library/\\.kokoro/\\presubmit/graalvm-native.*\\.cfg"],
+      "fileMatch": ["^synthtool/gcp/templates/java-library/.kokoro/presubmit/graalvm-native.*.cfg"],
       "matchStrings": ["value: \"gcr.io/cloud-devrel-kokoro-resources/graalvm:(?<currentValue>.*?)\"",
         "value: \"gcr.io/cloud-devrel-kokoro-resources/graalvm17:(?<currentValue>.*?)\""],
       "depNameTemplate": "jdk",
