@@ -1,7 +1,7 @@
 timeout: 7200s # 2 hours
 substitutions:
   _ANOTHER_VAR: 'test'
-  _GRAALVM_VERSION: '22.3.0'
+  _GRAALVM_VERSION: '22.1.0'
 steps:
   # GraalVM build
   - name: gcr.io/cloud-builders/docker
