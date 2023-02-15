@@ -30,9 +30,9 @@
     {
       "fileMatch": ["^java/cloudbuild.yaml", "^java/cloudbuild-test.yaml", "^java/another_test.yaml"],
       "matchStrings": ["  _GRAALVM_VERSION: '(?<currentValue>.*?)'"],
-      "depNameTemplate": "ghcr.io/graalvm/jdk",
+      "depNameTemplate": "gcr.io/cloud-devrel-kokoro-resources/graalvm",
       "datasourceTemplate": "docker",
-      "packageNameTemplate": "ghcr.io/graalvm/jdk"
+      "packageNameTemplate": "gcr.io/cloud-devrel-kokoro-resources/graalvm"
     },
     {
       "fileMatch": ["^synthtool/gcp/templates/java-library/.kokoro/presubmit/graalvm-native.*.cfg"],
