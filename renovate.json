@@ -30,7 +30,7 @@
     {
       "fileMatch": ["^java/cloudbuild.yaml", "^java/cloudbuild-test.yaml", "^java/another_test.yaml"],
       "matchStrings": ["  _GRAALVM_VERSION: '(?<currentValue>.*?)'"],
-      "depNameTemplate": "jdk",
+      "depNameTemplate": "ghcr.io/graalvm/jdk",
       "datasourceTemplate": "docker",
       "packageNameTemplate": "ghcr.io/graalvm/jdk"
     },
