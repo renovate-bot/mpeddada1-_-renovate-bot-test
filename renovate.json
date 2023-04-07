@@ -4,6 +4,10 @@
     "config:base"
   ],
   "enabledManagers": ["regex"],
+  "includePaths": [
+    ".kokoro/nightly/graalvm-native.cfg",
+    ".kokoro/nightly/graalvm-native-.*.cfg"
+  ],
   "regexManagers": [
     {
       "fileMatch": ["^.kokoro/nightly/graalvm-native.cfg$",
@@ -12,7 +16,6 @@
         "value: \"gcr.io/cloud-devrel-kokoro-resources/graalvm17:(?<currentValue>.*?)\""],
       "depNameTemplate": "org.graalvm.sdk:graal-sdk",
       "datasourceTemplate": "maven"
-
     },
     {
       "fileMatch": ["^sample/project/myversion.json$"],
