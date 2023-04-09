@@ -6,7 +6,8 @@
   "enabledManagers": ["regex"],
   "includePaths": [
     ".kokoro/nightly/graalvm-native.cfg",
-    ".kokoro/nightly/graalvm-native-.*.cfg"
+    ".kokoro/nightly/graalvm-native-.*.cfg",
+    ".kokoro/nightly/graalvm-sub-jobs/native-.*/common.cfg"
   ],
   "regexManagers": [
     {
