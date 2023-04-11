@@ -7,13 +7,15 @@
   "includePaths": [
     ".kokoro/nightly/graalvm-native.cfg",
     ".kokoro/nightly/graalvm-native-*.cfg",
-    ".kokoro/nightly/graalvm-sub-jobs/native-*/common.cfg"
+    ".kokoro/nightly/graalvm-sub-jobs/native-*/common.cfg",
+    ".kokoro/presubmit/graalvm-native-*.cfg"
   ],
   "regexManagers": [
     {
       "fileMatch": ["^.kokoro/nightly/graalvm-native.cfg$",
         "^.kokoro/nightly/graalvm-native-.*.cfg$",
-        "^.kokoro/nightly/graalvm-sub-jobs/native-.*.cfg$"],
+        "^.kokoro/nightly/graalvm-sub-jobs/native-.*.cfg$",
+        "^.kokoro/presubmit/graalvm-native-.*.cfg$"],
       "matchStrings": ["value: \"gcr.io/cloud-devrel-kokoro-resources/graalvm:(?<currentValue>.*?)\"",
         "value: \"gcr.io/cloud-devrel-kokoro-resources/graalvm17:(?<currentValue>.*?)\""],
       "depNameTemplate": "org.graalvm.sdk:graal-sdk",
