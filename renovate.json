@@ -1,6 +1,4 @@
-
-{
-  "extends": [
+{"extends": [
     "config:base"
   ],
   "enabledManagers": ["regex"],
