@@ -9,6 +9,17 @@
     ".kokoro/nightly/graalvm-sub-jobs/native*/common.cfg",
     ".kokoro/presubmit/graalvm-native*.cfg"
   ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "^.kokoro/presubmit/graalvm.*.cfg$"
+      ],
+      "matchStrings": ["value: \"gcr.io/cloud-devrel-public-resources/graalvm.*:(?<currentValue>.*?)\""],
+      "depNameTemplate": "com.google.cloud:google-cloud-shared-config",
+      "datasourceTemplate": "maven"
+    }
+  ],
   "regexManagers": [
     {
       "fileMatch": [
@@ -24,16 +35,22 @@
       "fileMatch": [
         "^.kokoro/nightly/graalvm-native.*.cfg$",
         "^.kokoro/nightly/graalvm-sub-jobs/native.*.cfg$",
+        "^.kokoro/presubmit/graalvm-native.*.cfg$"
+      ],
+      "matchStrings": [
+        "value: \"gcr.io/cloud-devrel-kokoro-resources/graalvm:(?<currentValue>.*?)\"",
+        "value: \"gcr.io/cloud-devrel-kokoro-resources/graalvm17:(?<currentValue>.*?)\""
+      ]
+    },
+    {
+      "fileMatch": [
+        "^.kokoro/nightly/graalvm-native.*.cfg$",
+        "^.kokoro/nightly/graalvm-sub-jobs/native.*.cfg$",
         "^.kokoro/presubmit/graalvm-native.*.cfg$"],
       "matchStrings": ["value: \"gcr.io/cloud-devrel-kokoro-resources/graalvm:(?<currentValue>.*?)\"",
         "value: \"gcr.io/cloud-devrel-kokoro-resources/graalvm17:(?<currentValue>.*?)\""],
-    {
-      "packageRules": [
-        {
-          "matchPackageNames": ["org.graalvm.sdk:graal-sdk", "ghcr.io/graalvm/graalvm-ce"],
-          "groupName": "graalvm update"
-        }
-      ]
+      "depNameTemplate": "org.graalvm.sdk:graal-sdk",
+      "datasourceTemplate": "maven"
     }
   ]
 }
