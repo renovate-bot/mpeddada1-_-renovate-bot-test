@@ -49,6 +49,12 @@
         "value: \"gcr.io/cloud-devrel-kokoro-resources/graalvm17:(?<currentValue>.*?)\""],
       "depNameTemplate": "org.graalvm.sdk:graal-sdk",
       "datasourceTemplate": "maven"
+    },
+    {
+      "fileMatch": ["pom.xml"],
+      "matchStrings": ["<artifactId>google-cloud-shared-config</artifactId>\\s+<version>(?<currentValue>.*?)</version>"],
+      "depNameTemplate": "com.google.cloud:google-cloud-shared-dependencies",
+      "datasourceTemplate": "maven"
     }
   ]
 }
