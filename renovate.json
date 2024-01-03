@@ -52,7 +52,7 @@
     },
     {
       "fileMatch": ["^.*\/pom\\.xml$"],
-      "matchStrings": ["<artifactId>google-cloud-shared-config</artifactId>\\s+<version>(?<currentValue>.*?)</version>"],
+      "matchStrings": ["<version>(?<currentValue>.*?)</version>"],
       "depNameTemplate": "com.google.cloud:google-cloud-shared-dependencies",
       "datasourceTemplate": "maven"
     }
