@@ -12,6 +12,9 @@
     <description>
         The top-level parent for all modules in the repository.
     </description>
+    <properties>
+       <project.guava.version>30.1.1-android</project.guava.version>
+    </properties>
     <parent>
         <groupId>com.google.cloud</groupId>
         <artifactId>google-cloud-shared-config</artifactId>
@@ -23,6 +26,11 @@
             <groupId>com.google.cloud</groupId>
             <artifactId>google-cloud-shared-dependencies</artifactId>
             <version>3.18.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${project.guava.version}</version>
         </dependency>
     </dependencies>
 </project>
